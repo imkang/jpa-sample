@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 /**
  * Created by KangKyungYoung on 2016. 10. 3..
+ * 사용자
  */
 @Entity
 @Table(name = "USER")
@@ -17,6 +18,9 @@ public class User {
 
     @Column
     private int age;
+
+    @Column
+    private String desc;
 
     public Long getId() {
         return id;
@@ -40,6 +44,14 @@ public class User {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
     @Override
